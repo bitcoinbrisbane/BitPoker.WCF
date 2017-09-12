@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="UltimatePoker.PotInformation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:engine="clr-namespace:PokerEngine;assembly=PokerEngine">
+    <UserControl.Resources>
+        <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Margin" Value="3"/>
+        </Style>
+    </UserControl.Resources>
+    <UniformGrid Grid.Row="1" Grid.Column="1" x:Name="potData" FirstColumn="1"/>
+</UserControl>

@@ -1,0 +1,235 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	xmlns:my="clr-namespace:UltimatePoker"
+  xmlns:src="clr-namespace:UltimatePoker.Converters"
+  xmlns:local="clr-namespace:UltimatePoker.Controls"
+	x:Class="UltimatePoker.MainPlayerControl"
+	x:Name="UserControl"
+	Width="1028.952" Height="340" xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/UltimatePoker;component/Resources/CardResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <my:ChipColorConverter x:Key="ChipColorConverter"/>
+            <my:PositiveIntToVisibilityConverter x:Key="PositiveIntToVisibilityConverter"/>
+            <!--The control template for the chip button-->
+            <ControlTemplate TargetType="Button" x:Key="ChipButton">
+                <Grid x:Name="Chip" Height="65.445" Width="65.445" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.BitmapEffect>
+                        <DropShadowBitmapEffect Direction="274"/>
+                    </Grid.BitmapEffect>
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.181*"/>
+                        <ColumnDefinition Width="0.646*"/>
+                        <ColumnDefinition Width="0.173*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.403*"/>
+                        <RowDefinition Height="0.202*"/>
+                        <RowDefinition Height="0.395*"/>
+                    </Grid.RowDefinitions>
+                    <Ellipse Fill="#FF000000" Stroke="#FF000000" StrokeThickness="0" x:Name="ChipBG" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+                    <Ellipse Fill="{x:Null}" Stroke="{Binding Converter={StaticResource ChipColorConverter}}" StrokeThickness="6" Margin="5.759,5.759,5.759,5.759" x:Name="ColorChip" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+                    <Path Fill="{x:Null}" Stretch="Fill" Stroke="#FFFFFFFF" StrokeThickness="6" Margin="17.877,2.816,18.368,2.652" Grid.Column="1" Grid.RowSpan="3" Data="M150,71 L150,122.5"/>
+                    <Path Fill="{x:Null}" Stretch="Fill" Stroke="#FFFFFFFF" StrokeThickness="6" Data="M150,71 L150,122.5" RenderTransformOrigin="0.5,0.5" Margin="17.877,2.816,18.368,2.652" Grid.Column="1" Grid.RowSpan="3">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                <SkewTransform AngleX="0" AngleY="0"/>
+                                <RotateTransform Angle="-34.088"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path Fill="{x:Null}" Stretch="Fill" Stroke="#FFFFFFFF" StrokeThickness="6" Data="M150,71 L150,122.5" RenderTransformOrigin="0.5,0.5" Margin="17.877,2.816,18.368,2.652" Grid.Column="1" Grid.RowSpan="3">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                <SkewTransform AngleX="0" AngleY="0"/>
+                                <RotateTransform Angle="-64.172"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path Fill="{x:Null}" Stretch="Fill" Stroke="#FFFFFFFF" StrokeThickness="6" Data="M150,71 L150,122.5" RenderTransformOrigin="0.5,0.5" Margin="17.877,2.816,18.368,2.652" Grid.Column="1" Grid.RowSpan="3">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                <SkewTransform AngleX="0" AngleY="0"/>
+                                <RotateTransform Angle="-90.123"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path Fill="{x:Null}" Stretch="Fill" Stroke="#FFFFFFFF" StrokeThickness="6" Data="M150,71 L150,122.5" RenderTransformOrigin="0.5,0.5" Margin="17.877,2.816,18.368,2.652" Grid.Column="1" Grid.RowSpan="3">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                <SkewTransform AngleX="0" AngleY="0"/>
+                                <RotateTransform Angle="-145.249"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Path Fill="{x:Null}" Stretch="Fill" Stroke="#FFFFFFFF" StrokeThickness="6" Data="M150,71 L150,122.5" RenderTransformOrigin="0.5,0.5" Margin="17.877,2.816,18.368,2.652" Grid.Column="1" Grid.RowSpan="3">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                                <SkewTransform AngleX="0" AngleY="0"/>
+                                <RotateTransform Angle="-119.764"/>
+                                <TranslateTransform X="0" Y="0"/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+                    </Path>
+                    <Ellipse Fill="#FF000000" Stroke="{x:Null}" StrokeThickness="6" Margin="10.743,10.913,10.422,10.251" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="FontWeight" Value="Bold"/>
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Chip" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="2"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Chip" Storyboard.TargetProperty="(UIElement.BitmapEffect).(DropShadowBitmapEffect.Opacity)">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="1"/>
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Chip" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="2"/>
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Chip" Storyboard.TargetProperty="(UIElement.BitmapEffect).(DropShadowBitmapEffect.Opacity)">
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+                                        <SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+            <DataTemplate x:Key="BetButtonTemplate">
+                <Button Content="{Binding Converter={StaticResource CashConverter}}" Click="BetUpButtonClicked" Tag="{Binding}"
+						MouseRightButtonDown="BetDownButtonClicked" Margin="5,0,0,0" Template="{StaticResource ChipButton}"
+						Foreground="White"/>
+            </DataTemplate>
+
+            <DataTemplate x:Key="ActionButtonTemplate">
+                <Button Content="{Binding Path=Action, Converter={StaticResource ActionNameConverter}}" Width="79.168" Height="39.08" Click="ActionButtonClicked" Tag="{Binding Path=Action}"
+								IsEnabled="{Binding Path=IsOn}" Margin="5"
+                Visibility="{Binding Path=IsOn, Converter={StaticResource BooleanToVisibility}}"/>
+            </DataTemplate>
+            <DataTemplate x:Key="CallButtonTemplate">
+                <Button Width="79.168" Height="39.08" Click="ActionButtonClicked" Tag="{Binding Path=Action}"
+								IsEnabled="{Binding Path=IsOn}" Margin="5"
+                Visibility="{Binding Path=IsOn, Converter={StaticResource BooleanToVisibility}}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Path=Action, Converter={StaticResource ActionNameConverter}}"/>
+            <TextBlock Text="{Binding Path=Tag}" Margin="5,0,0,0"/>
+          </StackPanel>
+                </Button>
+            </DataTemplate>
+            <src:ActionTemplateSelector x:Key="actionSelector"/>
+            <SolidColorBrush Color="#FFD3C701" x:Key="mediumBrush"/>
+            <SolidColorBrush Color="#FFD30101" x:Key="lowBrush"/>
+        </ResourceDictionary>
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.083*"/>
+            <ColumnDefinition Width="0.052*"/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.06*"/>
+            <ColumnDefinition Width="0.059*"/>
+            <ColumnDefinition Width="0.446*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.057*"/>
+            <RowDefinition Height="0.079*"/>
+            <RowDefinition Height="0.081*"/>
+            <RowDefinition Height="0.359*"/>
+            <RowDefinition Height="0.051*"/>
+            <RowDefinition Height="0.086*"/>
+            <RowDefinition Height="0.146*"/>
+            <RowDefinition Height="0.141*"/>
+        </Grid.RowDefinitions>
+
+        <Border Visibility="{Binding Path=IsActive, Converter={StaticResource BooleanToVisibility}}" BorderBrush="#FFFFD700" BorderThickness="1,1,1,1" CornerRadius="4,4,4,4" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="1"
+						x:Name="ActiveBorder" Grid.RowSpan="7" Margin="0,0,9.771,0">
+            <Border.BitmapEffect>
+                <OuterGlowBitmapEffect GlowSize="7"/>
+            </Border.BitmapEffect>
+        </Border>
+        <Control Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="-10,-10,0,0" Style="{StaticResource DealerChip}"
+                 Visibility="{Binding Path=IsDealer,Converter={StaticResource BooleanToVisibility},FallbackValue=Collapsed}"/>
+        <TextBlock FontSize="16" FontWeight="Bold" Foreground="#FFFBFBF6" Text="{Binding Path=ThePlayer.Name}" TextAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" x:Name="PlayerName" VerticalAlignment="Center" Width="222.1" Grid.Column="2" Grid.Row="1">
+            <TextBlock.ToolTip>
+                <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Invested money: "/>
+                    <TextBlock Text="{Binding Path=PotInvestment}"/>
+                    </StackPanel>
+            </TextBlock.ToolTip>
+        </TextBlock>
+    <local:HandDisplay FontSize="16" Foreground="#FFFBFBF6" PlayerHand="{Binding Path=CurrentHand}" Text="{Binding Path=CurrentHand}" TextAlignment="Center" TextWrapping="Wrap" Grid.Column="2" Grid.Row="2" x:Name="hand" HorizontalAlignment="Center" VerticalAlignment="Center" Width="242"/>
+    <ItemsControl HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Style="{StaticResource CardsItemsControl}"
+									ItemsSource="{Binding Path=Cards}" ItemTemplateSelector="{StaticResource CardTemplateSelector}" x:Name="CadsHand" Grid.Column="2"
+                  ButtonBase.Click="CardButtonClicked" Grid.RowSpan="3"/>
+    <TextBlock FontSize="16" Foreground="#FFFBFBF6" Text="{Binding Path=Message}" TextAlignment="Center" TextWrapping="Wrap" Grid.Column="2" Grid.Row="6" x:Name="message"
+               Margin="5"/>
+    <ProgressBar x:Name="timeLimit" Grid.Column="2" Grid.Row="6" Minimum="0" Maximum="240" Value="{Binding Path=RemainingTime}" 
+                 Visibility="{Binding Path=RemainingTime,Converter={StaticResource PositiveIntToVisibilityConverter}}" Margin="5"/>
+    <ItemsControl HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="7" x:Name="RoundActions"
+									ItemTemplateSelector="{StaticResource actionSelector}" ItemsSource="{Binding Path=RoundActionsList}" d:LayoutOverrides="GridBox">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>
+    <TextBlock FontSize="16" FontWeight="Bold" Foreground="#FFFFFFFF" Text="{Binding Path=ThePlayer.CurrentBet, Converter={StaticResource CashConverter}}" TextAlignment="Center" TextWrapping="Wrap" Grid.Column="5" Grid.Row="2" x:Name="BetSum"/>
+    <ItemsControl HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="3" x:Name="BetButtons"
+									ItemTemplate="{StaticResource BetButtonTemplate}" ItemsSource="{Binding Path=RaiseAmounts}">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>
+    <TextBlock FontSize="16" FontWeight="Bold" Foreground="#FFFFFFFF" Text="{Binding Path=ThePlayer.Money, Converter={StaticResource CashConverter}}" TextAlignment="Center" TextWrapping="Wrap" x:Name="PlayerCash" Grid.Column="5" Grid.Row="4"/>
+    <ItemsControl HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="6" x:Name="BetActions"
+									ItemTemplate="{StaticResource ActionButtonTemplate}" ItemsSource="{Binding Path=BetActionsList}" d:LayoutOverrides="GridBox">
+      <ItemsControl.ItemsPanel>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </ItemsControl.ItemsPanel>
+    </ItemsControl>
+  </Grid>
+</UserControl>

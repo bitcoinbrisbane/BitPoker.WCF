@@ -1,0 +1,56 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:src="clr-namespace:UltimatePoker.Controls"
+	x:Class="UltimatePoker.PlayerControl"
+	x:Name="UserControl"
+    HorizontalAlignment="Stretch"
+    VerticalAlignment="Stretch"
+	Margin="3,10,0,10">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/UltimatePoker;component/Resources/CardResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.685*"/>
+            <RowDefinition Height="0.102*"/>
+            <RowDefinition Height="0.115*"/>
+            <RowDefinition Height="0.098*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <ItemsControl Grid.Row="0" Grid.RowSpan="5" Margin="3,6,0,6"
+                HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource CardsItemsControl}"
+									ItemsSource="{Binding Path=Cards}" ItemTemplateSelector="{StaticResource CardTemplateSelector}">
+
+        </ItemsControl>
+        <Control Grid.Row="2" Grid.Column="0" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,10,0,0" Style="{StaticResource DealerChip}"
+                 Visibility="{Binding Path=IsDealer,Converter={StaticResource BooleanToVisibility},FallbackValue=Collapsed}">
+            <Control.RenderTransform>
+                <ScaleTransform ScaleX="0.7" ScaleY="0.7"/>
+            </Control.RenderTransform>
+        </Control>
+        <src:HandDisplay x:Name="PlayerHand" Grid.Row="1" FontSize="16" Foreground="#FFFFFFFF" PlayerHand="{Binding Path=CurrentHand}" Text="{Binding Path=CurrentHand}" TextAlignment="Center" TextWrapping="Wrap"/>
+        <TextBlock x:Name="PlayerName" Grid.Row="2" FontSize="16" FontWeight="Bold" Foreground="{Binding Path=AssociatedColor}" Text="{Binding Path=ThePlayer.Name}" TextAlignment="Center" TextWrapping="Wrap">
+            <TextBlock.ToolTip>
+                <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Invested money: "/>
+                    <TextBlock Text="{Binding Path=PotInvestment}"/>
+                    </StackPanel>
+            </TextBlock.ToolTip>
+                </TextBlock>
+        <TextBlock x:Name="PlayerCash" Grid.Row="3" FontSize="16" FontWeight="Bold" Foreground="#FFFFFFFF" Text="{Binding Path=ThePlayer.Money,Converter={StaticResource CashConverter}}" TextAlignment="Center" TextWrapping="Wrap"/>
+		<TextBlock x:Name="PlayerMessage" FontSize="16" FontWeight="Bold" Foreground="#FFFFFFFF" Text="{Binding Path=Message}" TextAlignment="Center" TextWrapping="Wrap" Grid.Row="4"/>
+		<Border Visibility="{Binding Path=IsActive,Converter={StaticResource BooleanToVisibility},FallbackValue=Hidden}" Grid.RowSpan="5" BorderBrush="#FFFFD700" BorderThickness="1,1,1,1" CornerRadius="4,4,4,4" x:Name="ActiveBorder">
+			<Border.BitmapEffect>
+				<OuterGlowBitmapEffect GlowSize="7"/>
+			</Border.BitmapEffect>
+		</Border>
+	</Grid>
+</UserControl>

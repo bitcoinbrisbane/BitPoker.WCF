@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Data;
+
+namespace UltimatePoker
+{
+    /// <summary>
+    /// A converter which is used to convert the player action to a human readable string value
+    /// </summary>
+	public class ActionNameConverter : IValueConverter
+	{
+		#region IValueConverter Members
+
+        /// <summary>Converts a value. </summary>
+        /// <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+        /// <param name="value">The value produced by the binding source.</param>
+        /// <param name="targetType">The type of the binding target property.</param>
+        /// <param name="parameter">The converter parameter to use.</param>
+        /// <param name="culture">The culture to use in the converter.</param>
+		public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			if (value == null)
+				return Binding.DoNothing;
+
+			GuiActions action = (GuiActions)value;
+            // split the all in value, 
+			if (action == GuiActions.AllIn)
+				return "All In";
+                // in all other cases, use the action name
+			else
+				return action.ToString();
+		}
+
+        /// <summary>Converts a value. </summary>
+        /// <returns>A converted value. If the method returns null, the valid null value is used.</returns>
+        /// <param name="value">The value that is produced by the binding target.</param>
+        /// <param name="targetType">The type to convert to.</param>
+        /// <param name="parameter">The converter parameter to use.</param>
+        /// <param name="culture">The culture to use in the converter.</param>
+		public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+		{
+			return null;
+		}
+
+		#endregion
+	}
+}

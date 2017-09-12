@@ -1,0 +1,575 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controls="clr-namespace:UltimatePoker.Controls">
+
+    <!--Suites drawings-->
+    <ControlTemplate x:Key="Spades" TargetType="{x:Type ContentControl}">
+        <Path Fill="#FF000000" Stretch="Fill" Stroke="#FF000000" Data="M408.25275,58.865239 C408.25275,58.865239 366.27797,107.25342 396.30183,111.91732 410.29374,112.50038 400.09134,125.90818 395.13582,126.20034 390.18031,126.4925 423.57964,126.17685 423.57964,126.17685 425.81643,126.00177 406.54119,121.2227 419.03826,112.20881 439.735,114.54077 437.19767,85.755041 408.25275,58.865239 z"/>
+    </ControlTemplate>
+    <ControlTemplate x:Key="Hearts" TargetType="{x:Type ContentControl}">
+        <Path Fill="#FFC50000" Stretch="Fill" Stroke="#FF000000" Data="M421.00052,229.00156 C346.00057,177.00076 400.00028,314.00138 425.00004,319.00108 450.0002,313.00159 498.00013,170.0008 421.00052,229.00156 z"/>
+    </ControlTemplate>
+    <ControlTemplate x:Key="Diamonds" TargetType="{x:Type ContentControl}">
+        <Path Fill="#FFC50000" Stretch="Fill" Stroke="#FF000000" Data="M377,170 L343.7425,229.76889 376.08339,292.28313 408.42339,229.76889 z"/>
+    </ControlTemplate>
+    <ControlTemplate x:Key="Clubs" TargetType="{x:Type ContentControl}">
+        <Path Fill="#FF000000" Stretch="Fill" Stroke="#FF000000" Data="F1 M8.8850002,-14.439 C14.533769,-14.439 19.113001,-10.372402 19.113001,-5.3559999 19.113001,-1.8951652 16.933437,1.1135936 13.671454,2.5310738 13.758695,3.6462593 14.178701,4.8272204 15.399819,4.9543962 C16.817385,2.0263681 19.642809,0.12 22.870001,0.11999989 C27.778154,0.12 31.757,4.5295477 31.757,9.9689999 C31.757,15.408452 27.778154,19.818001 22.870001,19.818001 C19.475044,19.818001 16.524712,17.708275 15.138498,14.554057 L12.188419,14.640689 C12.188923,14.686196 12.341055,28.064857 17.239002,30.369699 8.7251759,30.513975 1.0770371,30.514006 1.077037,30.514006 1.1171052,30.473845 7.9974036,23.561457 5.839149,14.640887 4.5910993,14.681144 3.6238582,14.710169 2.8778701,14.730625 C1.4479682,17.793743 -1.5133642,19.818001 -4.9105,19.818001 -9.9244175,19.818001 -13.989,15.408452 -13.989,9.9689999 -13.989,4.5295477 -9.9244175,0.12 -4.9105,0.11999989 C-1.8569651,0.12 0.84446633,1.7554811 2.3486845,4.3558726 2.9178689,4.1311555 3.3865914,3.4838374 3.580575,2.2209432 C0.59282494,0.76565546 -1.3430001,-2.0944118 -1.3430001,-5.3559999 -1.3430001,-10.372402 3.2362316,-14.439 8.8850002,-14.439 z"/>
+    </ControlTemplate>
+    <ControlTemplate x:Key="CrownTemplate" TargetType="{x:Type ContentControl}">
+        <Path Fill="#FFECE300" Stretch="Fill" Stroke="#FF000000" Data="M607.50071,319.78603 L599.21437,295.21476 610.3576,303.50046 615.50105,284.07187 620.92946,303.50046 632.07277,295.50047 624.07284,319.78576 C618.9277,322.62072 613.41033,322.67073 607.50071,319.78603 z"/>
+    </ControlTemplate>
+
+    <DataTemplate x:Key="TwoCardTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.284*"/>
+                <ColumnDefinition Width="0.385*"/>
+                <ColumnDefinition Width="0.331*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.082*"/>
+                <RowDefinition Height="0.188*"/>
+                <RowDefinition Height="0.431*"/>
+                <RowDefinition Height="0.187*"/>
+                <RowDefinition Height="0.112*"/>
+            </Grid.RowDefinitions>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="1"/>
+            <controls:SuiteControl Grid.Row="3" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ThreeCardTemplate">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.094*"/>
+                <RowDefinition Height="0.182*"/>
+                <RowDefinition Height="0.121*"/>
+                <RowDefinition Height="0.185*"/>
+                <RowDefinition Height="0.133*"/>
+                <RowDefinition Height="0.18*"/>
+                <RowDefinition Height="0.105*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.29*"/>
+                <ColumnDefinition Width="0.383*"/>
+                <ColumnDefinition Width="0.327*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1"/>
+            <controls:SuiteControl Grid.Row="3" Grid.Column="1"/>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="5" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FourCardTemplate">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.056*"/>
+                <RowDefinition Height="0.174*"/>
+                <RowDefinition Height="0.521*"/>
+                <RowDefinition Height="0.176*"/>
+                <RowDefinition Height="0.073*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.371*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.37*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1"/>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="3"/>
+            <controls:SuiteControl Grid.Row="3" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="3" Grid.Column="3" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FiveCardTemplate">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.056*"/>
+                <RowDefinition Height="0.174*"/>
+                <RowDefinition Height="0.163*"/>
+                <RowDefinition Height="0.186*"/>
+                <RowDefinition Height="0.172*"/>
+                <RowDefinition Height="0.176*"/>
+                <RowDefinition Height="0.073*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.273*"/>
+                <ColumnDefinition Width="0.098*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.098*"/>
+                <ColumnDefinition Width="0.272*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                            <SkewTransform AngleX="0" AngleY="0"/>
+                            <RotateTransform Angle="0"/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SixCardTemplate">
+        <Grid Width="68.747" Height="148.41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.056*"/>
+                <RowDefinition Height="0.174*"/>
+                <RowDefinition Height="0.166*"/>
+                <RowDefinition Height="0.177*"/>
+                <RowDefinition Height="0.178*"/>
+                <RowDefinition Height="0.176*"/>
+                <RowDefinition Height="0.073*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.371*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.37*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1"/>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="3"/>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="3" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="3"/>
+            <controls:SuiteControl Grid.Column="3" Grid.Row="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SevenCardTemplate">
+        <Grid Width="68.747" Height="148.41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.056*"/>
+                <RowDefinition Height="0.174*"/>
+                <RowDefinition Height="0.18*"/>
+                <RowDefinition Height="0.18*"/>
+                <RowDefinition Height="0.161*"/>
+                <RowDefinition Height="0.176*"/>
+                <RowDefinition Height="0.073*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.267*"/>
+                <ColumnDefinition Width="0.104*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.104*"/>
+                <ColumnDefinition Width="0.266*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="EightCardTemplate">
+        <Grid Width="68.747" Height="148.41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.056*"/>
+                <RowDefinition Height="0.174*"/>
+                <RowDefinition Height="0.18*"/>
+                <RowDefinition Height="0.18*"/>
+                <RowDefinition Height="0.181*"/>
+                <RowDefinition Height="0.172*"/>
+                <RowDefinition Height="0.057*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.267*"/>
+                <ColumnDefinition Width="0.104*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.104*"/>
+                <ColumnDefinition Width="0.266*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="5" Grid.Column="4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Column="4" Grid.Row="3" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3"/>
+            <controls:SuiteControl Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="4" RenderTransformOrigin="0.5,0.5">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="NineCardTemplate">
+        <Grid Width="68.747" Height="148.41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.056*"/>
+                <RowDefinition Height="0.174*"/>
+                <RowDefinition Height="0.017*"/>
+                <RowDefinition Height="0.163*"/>
+                <RowDefinition Height="0.02*"/>
+                <RowDefinition Height="0.141*"/>
+                <RowDefinition Height="0.019*"/>
+                <RowDefinition Height="0.167*"/>
+                <RowDefinition Height="0.014*"/>
+                <RowDefinition Height="0.172*"/>
+                <RowDefinition Height="0.057*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.267*"/>
+                <ColumnDefinition Width="0.104*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.104*"/>
+                <ColumnDefinition Width="0.266*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2"/>
+            <controls:SuiteControl Grid.Row="9" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="9" Grid.Column="4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="6" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="4" Grid.Row="6" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="3" Grid.RowSpan="3"/>
+            <controls:SuiteControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="2"/>
+            <controls:SuiteControl Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="3" Grid.RowSpan="2"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="TenCardTemplate">
+        <Grid Width="68.747" Height="148.41">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.043*"/>
+                <RowDefinition Height="0.136*"/>
+                <RowDefinition Height="0.05*"/>
+                <RowDefinition Height="0.077*"/>
+                <RowDefinition Height="0.049*"/>
+                <RowDefinition Height="0.129*"/>
+                <RowDefinition Height="0.024*"/>
+                <RowDefinition Height="0.134*"/>
+                <RowDefinition Height="0.049*"/>
+                <RowDefinition Height="0.08*"/>
+                <RowDefinition Height="0.042*"/>
+                <RowDefinition Height="0.13*"/>
+                <RowDefinition Height="0.057*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.04*"/>
+                <ColumnDefinition Width="0.279*"/>
+                <ColumnDefinition Width="0.092*"/>
+                <ColumnDefinition Width="0.175*"/>
+                <ColumnDefinition Width="0.088*"/>
+                <ColumnDefinition Width="0.282*"/>
+                <ColumnDefinition Width="0.044*"/>
+            </Grid.ColumnDefinitions>
+            <controls:SuiteControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2"/>
+            <controls:SuiteControl Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2"/>
+            <controls:SuiteControl Grid.Column="2" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="3"/>
+            <controls:SuiteControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" Grid.RowSpan="2"/>
+            <controls:SuiteControl Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="4" Grid.RowSpan="2"/>
+            <controls:SuiteControl Grid.Column="1" Grid.Row="7" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="4" Grid.Row="7" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Column="2" Grid.ColumnSpan="3" RenderTransformOrigin="0.5,0.5" Grid.Row="8" Grid.RowSpan="3">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="10" Grid.Column="1" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+            <controls:SuiteControl Grid.Row="10" Grid.Column="4" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                <controls:SuiteControl.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="1" ScaleY="1"/>
+                        <SkewTransform AngleX="0" AngleY="0"/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform X="0" Y="0"/>
+                    </TransformGroup>
+                </controls:SuiteControl.RenderTransform>
+            </controls:SuiteControl>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="AceCardTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.112*"/>
+                <ColumnDefinition Width="0.774*"/>
+                <ColumnDefinition Width="0.114*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.308*"/>
+                <RowDefinition Height="0.384*"/>
+                <RowDefinition Height="0.308*"/>
+            </Grid.RowDefinitions>
+            <controls:SuiteControl Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="JackCardTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.112*"/>
+                <ColumnDefinition Width="0.17*"/>
+                <ColumnDefinition Width="0.417*"/>
+                <ColumnDefinition Width="0.187*"/>
+                <ColumnDefinition Width="0.114*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.145*"/>
+                <RowDefinition Height="0.163*"/>
+                <RowDefinition Height="0.059*"/>
+                <RowDefinition Height="0.325*"/>
+                <RowDefinition Height="0.308*"/>
+            </Grid.RowDefinitions>
+            <controls:SuiteControl Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+            <ContentControl Grid.Column="2" Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" Template="{StaticResource CrownTemplate}"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="QueenCardTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.112*"/>
+                <ColumnDefinition Width="0.17*"/>
+                <ColumnDefinition Width="0.417*"/>
+                <ColumnDefinition Width="0.018*"/>
+                <ColumnDefinition Width="0.169*"/>
+                <ColumnDefinition Width="0.114*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.208*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.06*"/>
+                <RowDefinition Height="0.324*"/>
+                <RowDefinition Height="0.308*"/>
+            </Grid.RowDefinitions>
+            <controls:SuiteControl Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+            <Path Fill="#FFECE300" Stretch="Fill" Stroke="#FF000000" Data="M607.50071,319.78603 L606.01274,315.37378 C582.20389,304.16384 611.8435,291.56854 613.33922,300.97461 L616.13305,292.60335 618.92785,300.57596 C619.21749,292.70247 648.86629,301.77192 625.5198,315.39324 L624.07284,319.78576 C618.9277,322.62072 613.41033,322.67073 607.50071,319.78603 z" x:Name="QueenCrown" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="KingCardTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.112*"/>
+                <ColumnDefinition Width="0.162*"/>
+                <ColumnDefinition Width="0.051*"/>
+                <ColumnDefinition Width="0.117*"/>
+                <ColumnDefinition Width="0.12*"/>
+                <ColumnDefinition Width="0.133*"/>
+                <ColumnDefinition Width="0.191*"/>
+                <ColumnDefinition Width="0.114*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.145*"/>
+                <RowDefinition Height="0.163*"/>
+                <RowDefinition Height="0.063*"/>
+                <RowDefinition Height="0.138*"/>
+                <RowDefinition Height="0.025*"/>
+                <RowDefinition Height="0.018*"/>
+                <RowDefinition Height="0.067*"/>
+                <RowDefinition Height="0.073*"/>
+                <RowDefinition Height="0.308*"/>
+            </Grid.RowDefinitions>
+            <controls:SuiteControl Grid.Row="2" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="6"/>
+            <ContentControl Grid.Column="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Row="1" Template="{StaticResource CrownTemplate}"/>
+            <Path HorizontalAlignment="Right" Stretch="Fill" Stroke="#FF000000" Data="M529.52933,317.47623 C528.02025,317.47635 519.67003,316.36943 519.46804,319.38817 523.40052,319.7558 527.46337,319.63714 531.64203,319.08655 535.42518,319.68737 539.35562,319.76288 543.41238,319.38786 543.41238,319.38786 540.9983,316.67072 533.65413,317.47579 533.65413,317.47579 531.0384,317.97955 529.52933,317.47623 z" Fill="#FFFFFFFF" x:Name="BeardMustache" Grid.Column="3" Grid.Row="4" Grid.ColumnSpan="3"/>
+            <Path x:Name="BeardGoatie" Fill="#FFFFFFFF" Stretch="Fill" Stroke="#FF000000" Data="M595.91772,321.57305 C595.91772,321.57305 597.83259,319.36404 601.80903,321.4259 601.70066,324.50779 601.51473,327.7567 598.71636,329.08219 595.7707,327.7567 595.91772,321.57305 595.91772,321.57305 z" Grid.Column="4" Grid.Row="6"/>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

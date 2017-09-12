@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerRules", "PokerRules\PokerRules.csproj", "{A2B13098-37D4-470D-B026-DFECA12DE275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerEngine", "PokerEngine\PokerEngine.csproj", "{D697897A-0E41-454D-9E31-F19103895893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UltimatePoker", "UltimatePoker\UltimatePoker.csproj", "{5A728C2B-75D7-4D13-897A-4791163D1EBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerConsole", "PokerConsole\PokerConsole.csproj", "{22D5039A-B74C-469A-A062-5D248B288824}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "PokerSetup", "PokerSetup\PokerSetup.vdproj", "{D17A4906-3F41-455D-9764-83C7CCE6C770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerService", "PokerService\PokerService.csproj", "{2692E887-2461-4E83-B530-4983829B288E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs07.codeplex.com/
+		SccProjectUniqueName0 = UltimatePoker\\UltimatePoker.csproj
+		SccProjectName0 = UltimatePoker
+		SccLocalPath0 = UltimatePoker
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = PokerSetup\\PokerSetup.vdproj
+		SccProjectName2 = PokerSetup
+		SccLocalPath2 = PokerSetup
+		SccProjectUniqueName3 = PokerService\\PokerService.csproj
+		SccProjectName3 = PokerService
+		SccLocalPath3 = PokerService
+		SccProjectUniqueName4 = PokerRules\\PokerRules.csproj
+		SccProjectName4 = PokerRules
+		SccLocalPath4 = PokerRules
+		SccProjectUniqueName5 = PokerEngine\\PokerEngine.csproj
+		SccProjectName5 = PokerEngine
+		SccLocalPath5 = PokerEngine
+		SccProjectUniqueName6 = PokerConsole\\PokerConsole.csproj
+		SccProjectName6 = PokerConsole
+		SccLocalPath6 = PokerConsole
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A728C2B-75D7-4D13-897A-4791163D1EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A728C2B-75D7-4D13-897A-4791163D1EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A728C2B-75D7-4D13-897A-4791163D1EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A728C2B-75D7-4D13-897A-4791163D1EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D5039A-B74C-469A-A062-5D248B288824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D5039A-B74C-469A-A062-5D248B288824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D5039A-B74C-469A-A062-5D248B288824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D5039A-B74C-469A-A062-5D248B288824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17A4906-3F41-455D-9764-83C7CCE6C770}.Debug|Any CPU.ActiveCfg = Debug
+		{D17A4906-3F41-455D-9764-83C7CCE6C770}.Release|Any CPU.ActiveCfg = Release
+		{2692E887-2461-4E83-B530-4983829B288E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2692E887-2461-4E83-B530-4983829B288E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2692E887-2461-4E83-B530-4983829B288E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2692E887-2461-4E83-B530-4983829B288E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TextTemplating) = postSolution
+		TextTemplating = 1
+	EndGlobalSection
+EndGlobal
