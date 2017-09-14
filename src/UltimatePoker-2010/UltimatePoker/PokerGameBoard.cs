@@ -12,7 +12,7 @@ namespace UltimatePoker
     {
         public PokerGameBoard()
         {
-            ThePlayer = new GuiMainPlayer(new Player("Unnamed Player"));
+            ThePlayer = new GuiMainPlayer(new Player("turtle front uncle idea crush write shrug there lottery flower risk shell"));
         }
 
         #region ThePlayer Property
