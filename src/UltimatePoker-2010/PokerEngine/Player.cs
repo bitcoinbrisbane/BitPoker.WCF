@@ -17,24 +17,28 @@ namespace PokerEngine
     [Serializable]
     public class Player : INotifyPropertyChanged
     {
+        public BitPoker.Crypto.IWallet Wallet { get; private set; }
+
         /// <summary>
         /// Creates a new instance of the Player class.
         /// </summary>
-        /// <param name="name">The player name</param>
-        public Player(string name)
+        /// <param name="key">The player name</param>
+        public Player(string key)
         {
-            this.name = name;
+            this.Wallet = new BitPoker.Crypto.Bitcoin(key);
         }
 
-        private string name;
+        //private string name;
         /// <summary>
         /// Gets the player name.
         /// </summary>
         public string Name
         {
-            get { return name; }
+            get
+            {
+                return Wallet.Address.ToString();
+            }
         }
-
 
 
         private int money;
