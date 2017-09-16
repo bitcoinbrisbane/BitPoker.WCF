@@ -154,6 +154,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Wallet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI\TauntinAiFiveCardHelper.cs" />
@@ -226,6 +230,10 @@
     <Compile Include="StartNewGameWizard.xaml.cs">
       <DependentUpon>StartNewGameWizard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\WalletViewModel.cs" />
+    <Compile Include="Wallet.xaml.cs">
+      <DependentUpon>Wallet.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Wrappers\ActionWrapper.cs" />
     <Compile Include="Wrappers\CardWrapper.cs" />
     <Compile Include="Wrappers\GuiMainPlayer.cs" />
@@ -236,6 +244,10 @@
     <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BitPoker.Crypto\BitPoker.Crypto.csproj">
+      <Project>{462912bb-2390-4d7d-9f7c-837c33b61d88}</Project>
+      <Name>BitPoker.Crypto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PokerConsole\PokerConsole.csproj">
       <Project>{22D5039A-B74C-469A-A062-5D248B288824}</Project>
       <Name>PokerConsole</Name>

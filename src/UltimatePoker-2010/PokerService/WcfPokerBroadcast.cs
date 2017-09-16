@@ -10,6 +10,7 @@ namespace PokerService
     /// A wrapping service implementation of the <see cref="IPokerServiceBroadcast"/> using the <see cref="WcfEngineHelper"/>
     /// implementation
     /// </summary>
+    
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class WcfPokerBroadcast : IPokerServiceBroadcast
     {
@@ -24,8 +25,6 @@ namespace PokerService
         {
             this.concreteHelper = concreteHelper;
         }
-
-
 
         #region IPokerServiceBroadcast Members
 

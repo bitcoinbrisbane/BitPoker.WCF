@@ -58,12 +58,16 @@ namespace UltimatePoker
             AlwaysHighlight = configuration.StickyHighlighting;
             GameSpeed = configuration.GameSpeed;
             LogExpanded = configuration.ExpandLog;
+
             if (string.IsNullOrEmpty(configuration.SignInName))
             {
                 ChangeName(null, null);
             }
             else
+            {
                 gameBoard.ThePlayer = new GuiMainPlayer(new Player(configuration.SignInName));
+            }
+
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new EventHandler(SystemEvents_DisplaySettingsChanged);
 
         }

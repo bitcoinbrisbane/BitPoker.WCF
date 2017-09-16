@@ -17,11 +17,13 @@ namespace PokerService
         /// </summary>
         [DataMember]
         public int ConnectedPlayers { get; set; }
+
         /// <summary>
         /// Gets or sets a flag which indicates if the server accepts new connections
         /// </summary>
         [DataMember]
         public bool CanConnect { get; set; }
+
         /// <summary>
         /// Gets or sets the server running game
         /// </summary>

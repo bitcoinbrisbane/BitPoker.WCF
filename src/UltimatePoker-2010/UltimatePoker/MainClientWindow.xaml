@@ -7,7 +7,7 @@
     xmlns:sys="clr-namespace:System;assembly=mscorlib"
 	x:Class="UltimatePoker.MainClientWindow"
 	x:Name="Window"
-	Title="Ultimate Poker"
+	Title="BitPoker v0.1"
     WindowStartupLocation="Manual"
     Top="10"
     Left="10"

@@ -17,15 +17,16 @@ namespace PokerEngine
     [Serializable]
     public class Player : INotifyPropertyChanged
     {
-        public BitPoker.Crypto.IWallet Wallet { get; private set; }
+        //public BitPoker.Crypto.IWallet Wallet { get; private set; }
 
         /// <summary>
         /// Creates a new instance of the Player class.
         /// </summary>
-        /// <param name="key">The player name</param>
-        public Player(string key)
+        /// <param name="address">The player name</param>
+        public Player(string address)
         {
-            this.Wallet = new BitPoker.Crypto.Bitcoin(key);
+            //this.Wallet = new BitPoker.Crypto.Bitcoin(key);
+            this.Name = address;
         }
 
         //private string name;
@@ -34,10 +35,8 @@ namespace PokerEngine
         /// </summary>
         public string Name
         {
-            get
-            {
-                return Wallet.Address.ToString();
-            }
+            get;
+            private set;
         }
 
 
@@ -121,7 +120,7 @@ namespace PokerEngine
         /// </returns>
         public override string ToString()
         {
-            return string.Format("{0} ({1} BTC)", Wallet.Address, money);
+            return string.Format("{0} ({1} BTC)", Name, money);
         }
     }
 }

@@ -23,14 +23,18 @@ namespace PokerService
         {
             // create a new service finder 
             DiscoveryClient finder = new DiscoveryClient(new UdpDiscoveryEndpoint());
+            
             // probe the network
             FindResponse found = finder.Find(new FindCriteria(typeof(IPokerHost)) { Duration = TimeSpan.FromSeconds(2), MaxResults = int.MaxValue });
+
             Collection<EndpointDiscoveryMetadata> endpoints = found.Endpoints;
             // the binding which is used to connect to each server
             NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
+            
             // the result array
             ServiceLocation[] location = new ServiceLocation[endpoints.Count];
             int i = 0;
+
             foreach (EndpointDiscoveryMetadata prop in endpoints)
             {
                 // set the current result value

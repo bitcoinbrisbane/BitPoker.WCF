@@ -12,7 +12,7 @@ namespace UltimatePoker
     {
         public PokerGameBoard()
         {
-            ThePlayer = new GuiMainPlayer(new Player("turtle front uncle idea crush write shrug there lottery flower risk shell"));
+            ThePlayer = new GuiMainPlayer(new Player("moB3iVAXwsg39egX4uXCETUt3aNYiHiQ89"));
         }
 
         #region ThePlayer Property
@@ -90,9 +90,6 @@ namespace UltimatePoker
         }
 
 
-
-
-
         public bool IsRunning
         {
             get { return (bool)GetValue(IsRunningProperty); }
@@ -113,7 +110,7 @@ namespace UltimatePoker
 
         // Using a DependencyProperty as the backing store for BoardTitle.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty BoardTitleProperty =
-            DependencyProperty.Register("BoardTitle", typeof(string), typeof(PokerGameBoard), new UIPropertyMetadata("Ultimate Poker"));
+            DependencyProperty.Register("BoardTitle", typeof(string), typeof(PokerGameBoard), new UIPropertyMetadata("Bit Poker v0.1"));
 
 
 
