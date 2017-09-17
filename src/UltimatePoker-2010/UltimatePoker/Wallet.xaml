@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="Wallet" Height="300" Width="300">
     <Grid>
-        
+        <Button x:Name="button" Content="Refresh" HorizontalAlignment="Left" Margin="207,238,0,0" VerticalAlignment="Top" Width="75"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="10,133,0,0" VerticalAlignment="Top" Width="272"/>
+        <Label x:Name="label" Content="Tx History" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labBalance" Content="{Binding Balance}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
     </Grid>
 </Window>

@@ -88,9 +88,6 @@ namespace UltimatePoker
 
             double screenHeight = mainScreen.Bounds.Height;
             double screenWidth = mainScreen.Bounds.Width;
-
-
-
             double scaleFactor = 1;
             double curWidth = 0, curHeight = 0;
 
@@ -123,7 +120,6 @@ namespace UltimatePoker
 
 
         public PokerGameBoard GameBoard { get { return gameBoard; } }
-
 
 
         private void SelectHand(object sender, RoutedEventArgs e)
@@ -176,8 +172,6 @@ namespace UltimatePoker
             t.OnAlwaysHighlightPropertyChanged();
 
         }
-
-
 
         public bool LogExpanded
         {
@@ -272,7 +266,6 @@ namespace UltimatePoker
 
                     Storyboard.SetTargetProperty(positionCount, new PropertyPath(string.Format("(TextElement.TextEffects)[{0}].(TextEffect.PositionCount)", i)));
 
-
                     if (i > 0)
                     {
                         KeyTime startKeyTime = KeyTime.FromPercent((i - 1) * letterPercent);
@@ -320,6 +313,7 @@ namespace UltimatePoker
             getName.Owner = this;
             getName.Title = "Select a login name";
             getName.promptLabel.Content = "Select your login name";
+
             if (getName.ShowDialog().Value)
             {
                 string userName = getName.UserName.Text;
@@ -327,6 +321,5 @@ namespace UltimatePoker
                 ConfigurationAccess.Current.GuiConfiguration.SignInName = userName;
             }
         }
-
     }
 }

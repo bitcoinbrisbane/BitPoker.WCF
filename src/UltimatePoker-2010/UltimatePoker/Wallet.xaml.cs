@@ -19,8 +19,13 @@ namespace UltimatePoker
     /// </summary>
     public partial class Wallet : Window
     {
+        private readonly ViewModels.WalletViewModel _viewModel;
+
         public Wallet()
         {
+            _viewModel = new ViewModels.WalletViewModel();
+            this.DataContext = _viewModel;
+
             InitializeComponent();
         }
     }
