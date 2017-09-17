@@ -68,9 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deck\Card.cs" />
-    <Compile Include="Deck\Deck.cs" />
-    <Compile Include="Deck\Suite.cs" />
     <Compile Include="Games\BaseGame.cs" />
     <Compile Include="Games\FiveCardDrawGame.cs" />
     <Compile Include="Games\GameResult.cs" />
@@ -78,18 +75,6 @@
     <Compile Include="Games\OmahaHoldem.cs" />
     <Compile Include="Games\SevenCardStudGame.cs" />
     <Compile Include="Games\TexasHoldem.cs" />
-    <Compile Include="Hands\FlushFamily.cs" />
-    <Compile Include="Hands\FourOfAKindFamily.cs" />
-    <Compile Include="Hands\FullHouseFamily.cs" />
-    <Compile Include="Hands\Hand.cs" />
-    <Compile Include="Hands\HandFamily.cs" />
-    <Compile Include="Hands\HighCardFamily.cs" />
-    <Compile Include="Hands\NofAKindFamily.cs" />
-    <Compile Include="Hands\StraightFamily.cs" />
-    <Compile Include="Hands\StraightFlushFamily.cs" />
-    <Compile Include="Hands\ThreeOfAKindFamily.cs" />
-    <Compile Include="Hands\TwoOfAKindFamily.cs" />
-    <Compile Include="Hands\TwoPairFamily.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

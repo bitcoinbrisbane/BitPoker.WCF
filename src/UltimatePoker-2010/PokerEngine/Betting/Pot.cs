@@ -30,13 +30,13 @@ namespace PokerEngine.Betting
         /// <summary>
         /// Gets the current raise sum. The current raise can be raised by any player using a call to <see cref="Raise"/>
         /// </summary>
-        public int CurrentRaise
+        public virtual int CurrentRaise
         {
             get
             {
                 return (curRaise);
             }
-            private set
+            internal set
             {
                 if (curRaise != value)
                 {
@@ -50,13 +50,13 @@ namespace PokerEngine.Betting
         /// <summary>
         /// Gets tht total value of money in the pot.
         /// </summary>
-        public int Money
+        public virtual int Money
         {
             get
             {
                 return (money);
             }
-            private set
+            internal set
             {
                 if (money != value)
                 {

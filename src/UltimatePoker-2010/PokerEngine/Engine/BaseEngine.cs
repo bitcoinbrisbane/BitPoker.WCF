@@ -4,8 +4,8 @@ using System.Text;
 using System.Linq;
 using PokerRules.Games;
 using PokerEngine.Betting;
-using PokerRules.Hands;
-using PokerRules.Deck;
+using BitPoker.Models.Hands;
+using BitPoker.Models.Deck;
 using System.Collections.ObjectModel;
 using PokerEngine.Debug;
 

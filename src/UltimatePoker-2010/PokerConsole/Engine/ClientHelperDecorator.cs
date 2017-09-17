@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using PokerEngine;
 using PokerEngine.Engine;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using PokerService;
 
 namespace PokerConsole.Engine

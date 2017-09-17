@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PokerRules.Games;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using PokerEngine;
 using PokerEngine.Engine;
 namespace PokerService

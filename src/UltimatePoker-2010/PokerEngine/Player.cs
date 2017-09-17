@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 
 namespace PokerEngine
 {

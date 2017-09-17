@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PokerRules.Hands;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
+using BitPoker.Models.Hands;
 
 namespace PokerRules.Games
 {

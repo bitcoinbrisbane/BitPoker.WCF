@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Controls;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Windows.Data;
 
 namespace UltimatePoker.Controls

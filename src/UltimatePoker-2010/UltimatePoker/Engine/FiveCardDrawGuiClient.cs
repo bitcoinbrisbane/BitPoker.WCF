@@ -4,9 +4,9 @@ using System.Text;
 using PokerConsole.Engine;
 using PokerEngine;
 using PokerEngine.Engine;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Linq;
-using PokerRules.Hands;
+using BitPoker.Models.Hands;
 using PokerRules.Games;
 
 namespace UltimatePoker.Engine

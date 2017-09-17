@@ -5,8 +5,8 @@ using System.Net.Sockets;
 using System.Net;
 using System.Runtime.Serialization.Formatters.Binary;
 using PokerEngine;
-using PokerRules.Deck;
-using PokerRules.Hands;
+using BitPoker.Models.Deck;
+using BitPoker.Models.Hands;
 using PokerRules.Games;
 using PokerEngine.Engine;
 

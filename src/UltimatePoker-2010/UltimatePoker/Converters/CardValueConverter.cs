@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Data;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 
 namespace UltimatePoker
 {

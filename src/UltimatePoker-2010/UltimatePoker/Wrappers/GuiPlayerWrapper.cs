@@ -4,10 +4,10 @@ using System.Text;
 using PokerEngine;
 using System.Windows;
 using System.Collections.ObjectModel;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Collections.Specialized;
 using System.Collections;
-using PokerRules.Hands;
+using BitPoker.Models.Hands;
 using System.Windows.Media;
 
 namespace UltimatePoker

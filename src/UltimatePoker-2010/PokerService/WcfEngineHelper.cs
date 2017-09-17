@@ -6,7 +6,7 @@ using System.ServiceModel;
 using PokerEngine.Engine;
 using PokerEngine;
 using PokerRules.Games;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Threading;
 using System.ServiceModel.Channels;
 

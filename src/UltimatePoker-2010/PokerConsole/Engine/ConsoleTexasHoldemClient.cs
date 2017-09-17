@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using PokerEngine;
-using PokerRules.Hands;
-using PokerRules.Deck;
+using BitPoker.Models.Hands;
+using BitPoker.Models.Deck;
 using PokerService;
 using PokerRules.Games;
 

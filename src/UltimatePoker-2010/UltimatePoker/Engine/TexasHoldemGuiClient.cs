@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using PokerConsole.Engine;
 using PokerEngine;
-using PokerRules.Deck;
-using PokerRules.Hands;
+using BitPoker.Models.Deck;
+using BitPoker.Models.Hands;
 using PokerRules.Games;
 
 namespace UltimatePoker.Engine

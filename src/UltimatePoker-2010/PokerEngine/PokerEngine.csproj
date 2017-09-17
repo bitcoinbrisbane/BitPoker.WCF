@@ -92,6 +92,10 @@
       <Project>{462912bb-2390-4d7d-9f7c-837c33b61d88}</Project>
       <Name>BitPoker.Crypto</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BitPoker.Models\BitPoker.Models.csproj">
+      <Project>{44126ab1-adbb-4619-89b8-b0c5a098ea45}</Project>
+      <Name>BitPoker.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PokerRules\PokerRules.csproj">
       <Project>{A2B13098-37D4-470D-B026-DFECA12DE275}</Project>
       <Name>PokerRules</Name>

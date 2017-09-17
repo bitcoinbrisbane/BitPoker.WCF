@@ -7,7 +7,7 @@ using PokerEngine;
 using PokerEngine.Engine;
 using PokerRules.Games;
 using PokerService;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 
 namespace PokerConsole.AI
 {

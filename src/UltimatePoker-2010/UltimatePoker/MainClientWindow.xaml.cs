@@ -8,9 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using PokerEngine;
-using System.Collections.ObjectModel;
-using PokerRules.Deck;
-using UltimatePoker.Controls;
+using System.Collections.ObjectModel;using BitPoker.Models.Deck;using UltimatePoker.Controls;
 using System.Collections.Generic;
 using UltimatePoker.Configuration;
 

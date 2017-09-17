@@ -9,7 +9,7 @@ using System.ServiceModel;
 using System.ServiceModel.Channels;
 using PokerEngine;
 using PokerEngine.Engine;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Threading;
 
 namespace PokerConsole.Engine

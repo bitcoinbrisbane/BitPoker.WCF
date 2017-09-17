@@ -5,8 +5,8 @@ using System.Text;
 using PokerEngine;
 using PokerEngine.Engine;
 using PokerConsole.Engine;
-using PokerRules.Hands;
-using PokerRules.Deck;
+using BitPoker.Models.Hands;
+using BitPoker.Models.Deck;
 using PokerRules.Games;
 
 namespace PokerConsole.AI

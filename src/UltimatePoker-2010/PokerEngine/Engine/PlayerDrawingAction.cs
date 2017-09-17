@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 
 namespace PokerEngine.Engine
 {

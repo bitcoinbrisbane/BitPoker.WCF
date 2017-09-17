@@ -6,7 +6,7 @@ using PokerEngine;
 using PokerEngine.Engine;
 using System.Windows.Threading;
 using System.Threading;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using PokerService;
 
 namespace UltimatePoker.Engine

@@ -5,7 +5,7 @@ using System.Text;
 using System.ServiceModel;
 using PokerEngine;
 using PokerEngine.Engine;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 
 namespace PokerService
 {

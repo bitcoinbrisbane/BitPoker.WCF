@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using PokerRules.Games;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Collections.ObjectModel;
 
 namespace PokerEngine.Engine

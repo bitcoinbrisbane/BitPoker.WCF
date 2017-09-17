@@ -2,7 +2,7 @@
 using PokerEngine;
 using PokerEngine.Engine;
 using System.Collections.Generic;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using PokerService;
 namespace PokerConsole.Engine
 {

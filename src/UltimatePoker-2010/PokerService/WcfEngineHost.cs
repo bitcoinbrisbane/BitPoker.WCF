@@ -203,7 +203,7 @@ namespace PokerService
         /// <param name="orderedPlayers">The players in their current round order</param>
         /// <param name="potAmount">The current pot amount</param>
         /// <param name="communityCards">The game community cards, if any. Can be null</param>
-        public void WaitSynchronizePlayers(IEnumerable<PokerEngine.Player> orderedPlayers, int potAmount, PokerRules.Deck.Card[] communityCards)
+        public void WaitSynchronizePlayers(IEnumerable<PokerEngine.Player> orderedPlayers, int potAmount, BitPoker.Models.Deck.Card[] communityCards)
         {
             concreteHelper.WaitSynchronizePlayers(orderedPlayers, potAmount, communityCards);
         }

@@ -5,10 +5,10 @@ using System.Text;
 using PokerRules.Games;
 using PokerEngine;
 using PokerEngine.Engine;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 using System.Collections.ObjectModel;
 using PokerService;
-using PokerRules.Hands;
+using BitPoker.Models.Hands;
 
 namespace PokerConsole.Engine
 {

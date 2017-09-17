@@ -99,6 +99,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BitPoker.Models\BitPoker.Models.csproj">
+      <Project>{44126ab1-adbb-4619-89b8-b0c5a098ea45}</Project>
+      <Name>BitPoker.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PokerEngine\PokerEngine.csproj">
       <Project>{D697897A-0E41-454D-9E31-F19103895893}</Project>
       <Name>PokerEngine</Name>

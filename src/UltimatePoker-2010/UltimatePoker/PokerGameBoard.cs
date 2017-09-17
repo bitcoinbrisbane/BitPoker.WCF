@@ -4,7 +4,7 @@ using System.Text;
 using System.Windows;
 using PokerEngine;
 using System.Collections.ObjectModel;
-using PokerRules.Deck;
+using BitPoker.Models.Deck;
 
 namespace UltimatePoker
 {
@@ -18,7 +18,6 @@ namespace UltimatePoker
         #region ThePlayer Property
 
         private const string ThePlayerPropertyName = "ThePlayer";
-
 
         /// <summary>
         /// ThePlayer DependencyProperty of PokerGameBoard.

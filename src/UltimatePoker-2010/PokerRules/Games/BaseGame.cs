@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using PokerRules.Deck;
-using PokerRules.Hands;
+using BitPoker.Models.Deck;
+using BitPoker.Models.Hands;
 using System.Collections.ObjectModel;
 
 namespace PokerRules.Games
@@ -13,11 +13,14 @@ namespace PokerRules.Games
     public abstract class BaseGame : IRulesInterpreter
     {
         // The deck used in this game
-        private Deck.Deck deck = new Deck.Deck();
+        private BitPoker.Models.Deck.Deck deck = new BitPoker.Models.Deck.Deck();
+
         // An array of cards for each player
         private List<Card>[] playerCards = new List<Card>[0];
+
         // An array which indicates if a player has folded
         private bool[] foldedPlayers = new bool[0];
+
         // The defined game hand families
         private SortedList<int, HandFamily> families = new SortedList<int, HandFamily>();
 
@@ -48,6 +51,7 @@ namespace PokerRules.Games
                 throw new ArgumentOutOfRangeException("numberOfPlayers", "Must have at least one player");
             if (numberOfPlayers > MaximalPlayersLimit)
                 throw new ArgumentOutOfRangeException("numberOfPlayers", "Can't add players over the maximal player limit");
+            
             // shuffle the deck of cards.
             deck.Shuffle(numberOfPlayers * 2);
             // prepare the player card holders
@@ -86,7 +90,7 @@ namespace PokerRules.Games
         /// <summary>
         /// Gets the current game deck.
         /// </summary>
-        protected Deck.Deck Deck { get { return deck; } }
+        protected BitPoker.Models.Deck.Deck Deck { get { return deck; } }
 
         /// <summary>
         /// Gets the game defined hand families. Override this to define a custom hand order.
@@ -200,6 +204,7 @@ namespace PokerRules.Games
             Hand winningHand = null;
             // The list of winners.
             List<int> playersWithHighest = new List<int>();
+
             // loop over all of the playing players
             for (int player = 0; player < playerCards.Length; ++player)
             {

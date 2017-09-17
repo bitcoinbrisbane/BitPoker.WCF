@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using PokerRules.Hands;
+using BitPoker.Models.Hands;
 using PokerEngine;
 using PokerConsole.Engine;
 using PokerEngine.Engine;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
-using PokerRules.Hands;
+using BitPoker.Models.Deck;
+using BitPoker.Models.Hands;
 
 namespace PokerRules.Games
 {
@@ -38,6 +38,5 @@ namespace PokerRules.Games
         {
             get { return bestHand; }
         }
-
     }
 }
