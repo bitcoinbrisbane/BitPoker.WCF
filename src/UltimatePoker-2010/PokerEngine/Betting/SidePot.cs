@@ -14,8 +14,10 @@ namespace PokerEngine.Betting
     {
         // The list of currently active pots. This holds the pots which has active raises in them.
         private List<Pot> activePots = new List<Pot>();
+
         // The list of all pots
         private List<Pot> pots = new List<Pot>();
+
         // The current pot (activePots[activePots.Count - 1])
         private Pot currentPot;
         // A list of players which is used to test the pot split, players 

@@ -14,7 +14,7 @@ namespace PokerEngine.Betting
     /// This class does not support side pots, use <see cref="SidePot"/> for that.
     /// It implements <see cref="INotifyPropertyChanged"/> to allow GUI interaction.
     /// </remarks>
-    public class Pot : INotifyPropertyChanged, IPot
+    public class Pot : INotifyPropertyChanged
     {
         // the set of players which participated in the last betting round. 
         private HashSet<Player> participatingPlayers = new HashSet<Player>();
@@ -25,8 +25,8 @@ namespace PokerEngine.Betting
         // trace players total bet.
         private Dictionary<Player, int> playerToTotalBet = new Dictionary<Player, int>();
 
-
         private int curRaise;
+
         /// <summary>
         /// Gets the current raise sum. The current raise can be raised by any player using a call to <see cref="Raise"/>
         /// </summary>
@@ -45,8 +45,6 @@ namespace PokerEngine.Betting
                 }
             }
         }
-
-
 
         private int money;
         /// <summary>
@@ -89,9 +87,8 @@ namespace PokerEngine.Betting
             CurrentRaise += sum;
 
             Call(player);
-
-
         }
+
         /// <summary>
         /// Notifies the pot the given player has called.
         /// </summary>
@@ -194,6 +191,7 @@ namespace PokerEngine.Betting
         /// </summary>
         internal Dictionary<Player, int> PlayerToTotalBet { get { return playerToTotalBet; } }
 #endif
+
         /// <summary>
         /// Gets the player total investment in the pot
         /// </summary>
@@ -218,7 +216,6 @@ namespace PokerEngine.Betting
             Money = 0;
             // clear all dictionaries and sets
             participatingPlayers.Clear();
-
             playerToTotalBet.Clear();
 
         }

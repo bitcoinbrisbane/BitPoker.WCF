@@ -230,6 +230,7 @@
     <Compile Include="StartNewGameWizard.xaml.cs">
       <DependentUpon>StartNewGameWizard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\PotViewModel.cs" />
     <Compile Include="ViewModels\WalletViewModel.cs" />
     <Compile Include="Wallet.xaml.cs">
       <DependentUpon>Wallet.xaml</DependentUpon>

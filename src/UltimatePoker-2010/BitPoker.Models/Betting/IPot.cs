@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PokerEngine.Betting
+namespace BitPoker.Models.Betting
 {
     /// <summary>
     /// The basic interface of the pot.
@@ -18,12 +18,12 @@ namespace PokerEngine.Betting
         /// all of it's money is taken and a side pot should be used for the rest of the players. 
         /// A player can't win the amount of money the player didn't contributed to the pot.
         /// </remarks>
-        void Call(Player player);
+        void Call(IPlayer player);
 
         /// <summary>
         /// Gets the current raise sum. The current raise can be raised by any player using a call to <see cref="Raise"/>
         /// </summary>
-        int CurrentRaise { get; }
+        UInt64 CurrentRaise { get; }
 
         /// <summary>
         /// Gets the player call sum. This is the amount of money the player needs to add to the pot
@@ -33,18 +33,18 @@ namespace PokerEngine.Betting
         /// <returns>
         /// A sum indicates the amount of money the player needs to add to the pot so the player can participate in the winnings.
         /// </returns>
-        int GetPlayerCallSum(Player player);
+        UInt64 GetPlayerCallSum(IPlayer player);
 
         /// <summary>
         /// Gets tht total value of money in the pot.
         /// </summary>
-        int Money { get; }
+        UInt64 Money { get; }
 
         /// <summary>
         /// Notifies the pot that the given player has folded.
         /// </summary>
         /// <param name="player">Any player value, can't be null</param>
-        void Fold(Player player);
+        void Fold(IPlayer player);
 
         /// <summary>
         /// Determines if the given player can check.
@@ -53,7 +53,7 @@ namespace PokerEngine.Betting
         /// <returns>
         /// True if the player has participated in the pot and paid all of the required sum.
         /// </returns>
-        bool PlayerCanCheck(Player player);
+        bool PlayerCanCheck(IPlayer player);
 
         /// <summary>
         /// Can be called on behalf of any player, it raises the amount of the <see cref="CurrentRaise"/> by the given sum.
@@ -63,7 +63,7 @@ namespace PokerEngine.Betting
         /// <remarks>
         /// Note that the player automatically calls, any previous debts to the pot and then raises the current bet.
         /// </remarks>
-        void Raise(Player player, int sum);
+        void Raise(IPlayer player, UInt64 sum);
 
         /// <summary>
         /// Reset the pot raise, must be called after each betting round.
@@ -80,6 +80,6 @@ namespace PokerEngine.Betting
         /// The winners must all contribute evenly to the pot so they can split it. 
         /// A player can't earn money from the pot when the player didn't participate in the bettings.
         /// </remarks>
-        void SplitPot(ICollection<Player> players);
+        void SplitPot(ICollection<IPlayer> players);
     }
 }

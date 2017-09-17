@@ -13,7 +13,15 @@ namespace UltimatePoker.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Decimal Balance { get; }
+        public Decimal Balance
+        {
+            get; private set;
+        }
+
+        public Int64 Confirmations
+        {
+            get; private set;
+        }
 
         public WalletViewModel()
         {
@@ -31,6 +39,11 @@ namespace UltimatePoker.ViewModels
         public void Refresh()
         {
 
+        }
+
+        public String BuyIn(String[] publicKeys)
+        {
+            return "";
         }
 
         /// <summary>

@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PokerRules.Deck
+namespace BitPoker.Models.Deck
 {
     /// <summary>
     /// Defines the basic deck class. A deck holds a collection of cards which can be dealt.
     /// </summary>
-    [Obsolete]
     public class Deck : IEnumerable<Card>
     {
         // used to shuffle

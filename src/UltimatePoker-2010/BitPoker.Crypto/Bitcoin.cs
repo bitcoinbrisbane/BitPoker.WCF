@@ -15,6 +15,8 @@ namespace BitPoker.Crypto
 
         public String Address { get; private set; }
 
+        public String PublicKey { get; private set; }
+
         public Bitcoin(String words)
         {
             Mnemonic mnemo = new Mnemonic(words, Wordlist.English);
@@ -28,21 +30,6 @@ namespace BitPoker.Crypto
         //    _publicKeys = new List<string>();
         //}
 
-        public Task<ulong> GetBalanceAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<string> SendAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static String SignTx(String script, String privateKey)
-        {
-            throw new NotImplementedException();
-        }
-
         public void NewAddress()
         {
         
@@ -54,6 +41,11 @@ namespace BitPoker.Crypto
         }
 
         public void NewAddress(String[] words)
+        {
+            throw new NotImplementedException();
+        }
+
+        public String CreateMultiSig(String[] publicKeys, int m)
         {
             throw new NotImplementedException();
         }

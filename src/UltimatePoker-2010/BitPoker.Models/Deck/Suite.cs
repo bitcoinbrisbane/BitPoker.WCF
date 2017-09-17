@@ -1,14 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace PokerRules.Deck
+namespace BitPoker.Models.Deck
 {
     /// <summary>
     /// An enum which defines the card suites
     /// </summary>
-    /// 
-    [Obsolete]
     public enum Suite
     {
         /// <summary>

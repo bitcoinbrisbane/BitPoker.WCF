@@ -42,7 +42,7 @@ namespace UltimatePoker.Controls
 			else
 				return;
 
-			if (currentCard.CardSuite == Suite.Clobes)
+			if (currentCard.CardSuite == Suite.Clubs)
 				Template = TryFindResource("Clubs") as ControlTemplate;
 			else if (currentCard.CardSuite == Suite.Diamonds)
 				Template = TryFindResource("Diamonds") as ControlTemplate;

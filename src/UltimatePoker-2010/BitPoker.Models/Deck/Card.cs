@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace PokerRules.Deck
+namespace BitPoker.Models.Deck
 {
     /// <summary>
     /// The basic card structure
     /// </summary>
     [Serializable]
-    [Obsolete]
     public struct Card : IComparable<Card>
     {
         /// <summary>

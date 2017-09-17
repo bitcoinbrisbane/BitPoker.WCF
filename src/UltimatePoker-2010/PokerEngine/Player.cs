@@ -83,6 +83,7 @@ namespace PokerEngine
 
 
         private ObservableCollection<Card> cards = new ObservableCollection<Card>();
+
         /// <summary>
         /// An observable collection of cards which holds the current player cards.
         /// </summary>

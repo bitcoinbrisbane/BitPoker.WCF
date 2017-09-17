@@ -47,6 +47,7 @@ namespace PokerEngine.Engine
             this.raiseAmount = smallRaise;
             CanRaise = canRaise;
         }
+
         private BetAction action = BetAction.Fold;
         /// <summary>
         /// Gets a value indicating if the player can raise. 
@@ -88,8 +89,6 @@ namespace PokerEngine.Engine
         {
             get { return isAllInMode; }
         }
-
-
 
         private int callAmount;
         /// <summary>

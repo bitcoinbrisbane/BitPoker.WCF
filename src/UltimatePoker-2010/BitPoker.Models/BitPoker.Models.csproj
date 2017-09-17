@@ -40,7 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Betting\IPot.cs" />
+    <Compile Include="Deck\Card.cs" />
+    <Compile Include="Deck\Deck.cs" />
+    <Compile Include="Deck\Suite.cs" />
+    <Compile Include="Hands\FlushFamily.cs" />
+    <Compile Include="Hands\FourOfAKindFamily.cs" />
+    <Compile Include="Hands\FullHouseFamily.cs" />
+    <Compile Include="Hands\Hand.cs" />
+    <Compile Include="Hands\HandFamily.cs" />
+    <Compile Include="Hands\HighCardFamily.cs" />
+    <Compile Include="Hands\NofAKindFamily.cs" />
+    <Compile Include="Hands\StraightFamily.cs" />
+    <Compile Include="Hands\StraightFlushFamily.cs" />
+    <Compile Include="Hands\ThreeOfAKindFamily.cs" />
+    <Compile Include="Hands\TwoOfAKindFamily.cs" />
+    <Compile Include="Hands\TwoPairFamily.cs" />
+    <Compile Include="IPlayer.cs" />
     <Compile Include="IServerDetails.cs" />
+    <Compile Include="IClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
