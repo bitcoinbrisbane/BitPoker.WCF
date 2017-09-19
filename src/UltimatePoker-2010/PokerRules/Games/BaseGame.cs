@@ -77,6 +77,7 @@ namespace PokerRules.Games
             // start the game
             OnBeginGame();
         }
+
         /// <summary>
         /// Gets the number of players which started the game
         /// </summary>

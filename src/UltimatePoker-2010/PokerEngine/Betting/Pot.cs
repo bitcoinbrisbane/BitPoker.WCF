@@ -80,6 +80,7 @@ namespace PokerEngine.Betting
         {
             if (sum < 0)
                 throw new ArgumentOutOfRangeException("sum", "ammount must be positive");
+                
             if (player.Money < sum)
                 throw new ArgumentException("player", "player does not have enough money");
 

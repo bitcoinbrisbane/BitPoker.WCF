@@ -109,7 +109,7 @@ namespace UltimatePoker
 
         // Using a DependencyProperty as the backing store for BoardTitle.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty BoardTitleProperty =
-            DependencyProperty.Register("BoardTitle", typeof(string), typeof(PokerGameBoard), new UIPropertyMetadata("Bit Poker v0.1"));
+            DependencyProperty.Register("BoardTitle", typeof(string), typeof(PokerGameBoard), new UIPropertyMetadata("BitPoker v0.1"));
 
 
 

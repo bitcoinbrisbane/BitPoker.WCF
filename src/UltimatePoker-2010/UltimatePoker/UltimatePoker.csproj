@@ -114,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Lobby.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainClientWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,6 +198,9 @@
     <Compile Include="Engine\IFiveCardGuiClientHelper.cs" />
     <Compile Include="Engine\IGuiClientHelper.cs" />
     <Compile Include="Engine\TexasHoldemGuiClient.cs" />
+    <Compile Include="Lobby.xaml.cs">
+      <DependentUpon>Lobby.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainClientWindow.xaml.cs">
       <DependentUpon>MainClientWindow.xaml</DependentUpon>
     </Compile>
@@ -232,6 +239,7 @@
     </Compile>
     <Compile Include="ViewModels\LobbyViewModel.cs" />
     <Compile Include="ViewModels\PotViewModel.cs" />
+    <Compile Include="ViewModels\StartGameWizardViewModel.cs" />
     <Compile Include="ViewModels\WalletViewModel.cs" />
     <Compile Include="Wallet.xaml.cs">
       <DependentUpon>Wallet.xaml</DependentUpon>

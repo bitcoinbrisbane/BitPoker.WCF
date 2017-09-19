@@ -46,6 +46,7 @@ namespace UltimatePoker
             this.DataContext = this;
             GameModes = (ServerGame[])Enum.GetValues(typeof(ServerGame));
             this.Loaded += new RoutedEventHandler(StartNewGameWizard_Loaded);
+
             refreshTimer.Interval = TimeSpan.FromMilliseconds(500);
             refreshTimer.Tick += new EventHandler(refreshTimer_Tick);
 
@@ -320,7 +321,6 @@ namespace UltimatePoker
                 {
                     binaryHelper.PlayerConnected += new DataEventHandler<Player>(client_NewUserConnected);
                 }
-
             }
         }
 
@@ -422,8 +422,6 @@ namespace UltimatePoker
             waitHandle = null;
         }
 
-
-
         internal void Connect()
         {
             //prev.IsEnabled = false;
@@ -432,6 +430,7 @@ namespace UltimatePoker
             CreateClientThreadArguments args = new CreateClientThreadArguments();
             ClientHelperBridge bridge = new ClientHelperBridge();
             RulesInterpreterBridge rulesBridge = new RulesInterpreterBridge();
+
             bridge.ClientHelper = new GameClient<TexasHoldem>(new GuiHelper(new TexasHoldemGuiClient(rulesBridge, 2)));
             rulesBridge.Interpreter = (IRulesInterpreter)bridge.ClientHelper;
 
@@ -444,7 +443,6 @@ namespace UltimatePoker
             args.isSinglePlayer = singlePlayer.IsChecked.Value;
 
             ThreadPool.QueueUserWorkItem(StartGame, args);
-
         }
 
         private void StartGame(object state)
@@ -456,6 +454,7 @@ namespace UltimatePoker
 
                 BaseWcfClient wcfClient = new BaseWcfClient(client);
                 ServerDetails result = wcfClient.Initialize(args.address, args.port);
+
                 if (result.CanConnect || args.spectate)
                 {
                     if (result.Game != args.game)
@@ -595,9 +594,6 @@ namespace UltimatePoker
             }
         }
 
-
-
-
         void StartNewGameWizard_Loaded(object sender, RoutedEventArgs e)
         {
             this.Loaded -= new RoutedEventHandler(StartNewGameWizard_Loaded);
@@ -623,8 +619,6 @@ namespace UltimatePoker
             refreshTimer.Start();
         }
 
-
-
         public string ServerAddress
         {
             get { return (string)GetValue(ServerAddressProperty); }
@@ -634,8 +628,6 @@ namespace UltimatePoker
         // Using a DependencyProperty as the backing store for Address.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ServerAddressProperty =
             DependencyProperty.Register("ServerAddress", typeof(string), typeof(StartNewGameWizard), new FrameworkPropertyMetadata(string.Empty));
-
-
 
 
         public int ServerPort
@@ -654,8 +646,6 @@ namespace UltimatePoker
         {
             get { return discoveredServers; }
         }
-
-
 
         public IEnumerable<ServerGame> GameModes
         {
@@ -679,10 +669,6 @@ namespace UltimatePoker
         // Using a DependencyProperty as the backing store for SelectedGame.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SelectedGameProperty =
             DependencyProperty.Register("SelectedGame", typeof(ServerGame), typeof(StartNewGameWizard));
-
-
-
-
 
 
         public bool AcceptsNewPlayers
@@ -850,7 +836,6 @@ namespace UltimatePoker
         private void prev_Click(object sender, RoutedEventArgs e)
         {
             PreviousAction();
-
         }
 
         private void next_Click(object sender, RoutedEventArgs e)
@@ -878,12 +863,15 @@ namespace UltimatePoker
                 {
                     Func<IEnumerable<ServiceLocation>> call = (Func<IEnumerable<ServiceLocation>>)result.AsyncState;
                     IEnumerable<ServiceLocation> discovered = call.EndInvoke(result);
+
                     int prevCount = discoveredServers.Count;
                     discoveredServers.Clear();
+
                     foreach (ServiceLocation msg in discovered)
                     {
                         discoveredServers.Add(msg);
                     }
+
                     if (prevCount != discoveredServers.Count || discoveredServers.Count == 0)
                     {
                         refreshTimer.Interval = TimeSpan.FromMilliseconds(500);
@@ -904,8 +892,6 @@ namespace UltimatePoker
             {
                 refreshTimer.Stop();
             }
-
         }
     }
-
 }

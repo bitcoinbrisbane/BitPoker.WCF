@@ -1,0 +1,47 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Models", "BitPoker.Models\BitPoker.Models.csproj", "{44126AB1-ADBB-4619-89B8-B0C5A098EA45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Crypto", "BitPoker.Crypto\BitPoker.Crypto.csproj", "{462912BB-2390-4D7D-9F7C-837C33B61D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerEngine", "PokerEngine\PokerEngine.csproj", "{D697897A-0E41-454D-9E31-F19103895893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Engine.nTests", "BitPoker.PokerEngine.NTests\BitPoker.Engine.nTests.csproj", "{CC4AD45F-66E6-4CD0-AFA5-76AA80046B11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerRules", "PokerRules\PokerRules.csproj", "{A2B13098-37D4-470D-B026-DFECA12DE275}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Rules.nTests", "BitPoker.Rules.nTests\BitPoker.Rules.nTests.csproj", "{E56E8B86-D941-42B7-A618-55300D0D9AE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Debug|x86.Build.0 = Debug|Any CPU
+		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Release|x86.ActiveCfg = Release|Any CPU
+		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Release|x86.Build.0 = Release|Any CPU
+		{462912BB-2390-4D7D-9F7C-837C33B61D88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{462912BB-2390-4D7D-9F7C-837C33B61D88}.Debug|x86.Build.0 = Debug|Any CPU
+		{462912BB-2390-4D7D-9F7C-837C33B61D88}.Release|x86.ActiveCfg = Release|Any CPU
+		{462912BB-2390-4D7D-9F7C-837C33B61D88}.Release|x86.Build.0 = Release|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Debug|x86.Build.0 = Debug|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Release|x86.ActiveCfg = Release|Any CPU
+		{D697897A-0E41-454D-9E31-F19103895893}.Release|x86.Build.0 = Release|Any CPU
+		{CC4AD45F-66E6-4CD0-AFA5-76AA80046B11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC4AD45F-66E6-4CD0-AFA5-76AA80046B11}.Debug|x86.Build.0 = Debug|Any CPU
+		{CC4AD45F-66E6-4CD0-AFA5-76AA80046B11}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC4AD45F-66E6-4CD0-AFA5-76AA80046B11}.Release|x86.Build.0 = Release|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Debug|x86.Build.0 = Debug|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Release|x86.ActiveCfg = Release|Any CPU
+		{A2B13098-37D4-470D-B026-DFECA12DE275}.Release|x86.Build.0 = Release|Any CPU
+		{E56E8B86-D941-42B7-A618-55300D0D9AE5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E56E8B86-D941-42B7-A618-55300D0D9AE5}.Debug|x86.Build.0 = Debug|Any CPU
+		{E56E8B86-D941-42B7-A618-55300D0D9AE5}.Release|x86.ActiveCfg = Release|Any CPU
+		{E56E8B86-D941-42B7-A618-55300D0D9AE5}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

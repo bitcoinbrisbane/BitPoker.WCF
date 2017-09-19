@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Crypto", "BitPoker
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Models", "BitPoker.Models\BitPoker.Models.csproj", "{44126AB1-ADBB-4619-89B8-B0C5A098EA45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPoker.Repository", "BitPoker.Repository\BitPoker.Repository.csproj", "{3C7E3673-907E-4EF3-BE54-E7F36CAB8DE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44126AB1-ADBB-4619-89B8-B0C5A098EA45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7E3673-907E-4EF3-BE54-E7F36CAB8DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7E3673-907E-4EF3-BE54-E7F36CAB8DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7E3673-907E-4EF3-BE54-E7F36CAB8DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7E3673-907E-4EF3-BE54-E7F36CAB8DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -29,6 +29,7 @@ namespace UltimatePoker.ViewModels
 
         public WalletViewModel(string words)
         {
+            wallet = new BitPoker.Crypto.Bitcoin(words);
         }
 
         public void Save()

@@ -307,12 +307,19 @@ namespace UltimatePoker
             wizard.ShowDialog();
         }
 
+        private void ShowLobby(object sender, RoutedEventArgs e)
+        {
+            Lobby lobby = new Lobby();
+            lobby.Owner = this;
+            lobby.ShowDialog();
+        }
+
         private void ChangeName(object sender, RoutedEventArgs e)
         {
             PromptNameWindow getName = new PromptNameWindow();
             getName.Owner = this;
-            getName.Title = "Select a login name";
-            getName.promptLabel.Content = "Select your login name";
+            getName.Title = "Select a new address";
+            getName.promptLabel.Content = "Select your new address";
 
             if (getName.ShowDialog().Value)
             {

@@ -11,5 +11,7 @@
         <Grid HorizontalAlignment="Left" Height="100" Margin="10,133,0,0" VerticalAlignment="Top" Width="272"/>
         <Label x:Name="label" Content="Tx History" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
         <Label x:Name="labBalance" Content="{Binding Balance}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,66,0,0" TextWrapping="Wrap" Text="New" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,84,0,0" TextWrapping="Wrap" Text="correct horse battery staple" VerticalAlignment="Top" Width="272"/>
     </Grid>
 </Window>
