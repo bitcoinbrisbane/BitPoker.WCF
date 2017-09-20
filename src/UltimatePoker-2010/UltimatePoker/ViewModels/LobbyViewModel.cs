@@ -28,6 +28,11 @@ namespace UltimatePoker.ViewModels
             refreshTimer.Tick += new EventHandler(refreshTimer_Tick);
         }
 
+        public void StartTimer()
+        {
+            refreshTimer.Start();
+        }
+
         void refreshTimer_Tick(object sender, EventArgs e)
         {
             Func<IEnumerable<ServiceLocation>> call = new Func<IEnumerable<ServiceLocation>>(helper.Discover);

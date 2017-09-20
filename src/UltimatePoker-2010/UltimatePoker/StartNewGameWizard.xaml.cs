@@ -598,7 +598,6 @@ namespace UltimatePoker
         {
             this.Loaded -= new RoutedEventHandler(StartNewGameWizard_Loaded);
 
-
             SelectedPreset = ConfigurationAccess.Current.NewServerConfiguration;
 
             Port = SelectedPreset.Port;
@@ -656,8 +655,6 @@ namespace UltimatePoker
         // Using a DependencyProperty as the backing store for GameModes.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty GameModesProperty =
             DependencyProperty.Register("GameModes", typeof(IEnumerable<ServerGame>), typeof(StartNewGameWizard));
-
-
 
 
         public ServerGame SelectedGame

@@ -24,6 +24,8 @@ namespace UltimatePoker
         public Lobby()
         {
             _viewModel = new ViewModels.LobbyViewModel();
+            _viewModel.StartTimer();
+
             this.DataContext = _viewModel;
 
             InitializeComponent();
