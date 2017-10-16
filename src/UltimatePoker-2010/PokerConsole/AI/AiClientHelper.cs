@@ -39,8 +39,6 @@ namespace PokerConsole.AI
             this.client = client;
         }
 
-
-
         #region IClientHelper Members
 
 
@@ -53,7 +51,6 @@ namespace PokerConsole.AI
         {
             return aiName;
         }
-
 
 
         /// <summary>
@@ -142,8 +139,5 @@ namespace PokerConsole.AI
         {
             currentStrategy.Draw(player, action);
         }
-
-
-
     }
 }

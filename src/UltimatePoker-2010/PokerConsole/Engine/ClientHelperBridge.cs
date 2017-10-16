@@ -22,13 +22,25 @@ namespace PokerConsole.Engine
         // The five card helper which is used
         private IFiveCardClientHelper fiveCardHelper;
 
+        //private readonly BitPoker.Crypto.IWallet _wallet;
+
         /// <summary>
         /// 	<para>Initializes an instance of the <see cref="ClientHelperBridge"/> class.</para>
         /// </summary>
         public ClientHelperBridge()
             : base(null) // pass null, users must set a helper
         {
+            _wallet = new BitPoker.Crypto.Bitcoin();
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="wallet"></param>
+        public ClientHelperBridge(BitPoker.Crypto.IWallet wallet)
+            : base(null) // pass null, users must set a helper
+        {
+            _wallet = wallet;
         }
 
         /// <summary>

@@ -20,6 +20,8 @@ namespace PokerConsole.Engine
         // the helper used to implement the client interaction
         private IClientHelper helper;
 
+        internal BitPoker.Crypto.IWallet _wallet;
+
         /// <summary>
         /// 	<para>Initializes an instance of the <see cref="ClientHelperDecorator"/> class.</para>
         /// </summary>
@@ -83,7 +85,8 @@ namespace PokerConsole.Engine
         /// This method must aquire the user login name. A new value must be returned after a call to <see cref="NotifyNameExists"/></remarks>
         public virtual string GetName()
         {
-            return helper.GetName();
+            return _wallet.Address;
+            //return helper.GetName();
         }
 
         /// <summary>
@@ -298,8 +301,6 @@ namespace PokerConsole.Engine
         {
             helper.WaitSynchronization(player, potInformation, communityCards);
         }
-
-
 
 
         /// <summary>

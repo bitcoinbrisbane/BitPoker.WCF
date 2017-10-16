@@ -283,19 +283,19 @@ namespace PokerConsole.Engine
             else
             {
                 // there is an amount of money to call, print it:
-                Console.WriteLine("1. Call {0}$", action.CallAmount);
+                Console.WriteLine("1. Call {0}BTC", action.CallAmount);
             }
             if (!action.IsAllInMode && action.CanRaise)
             {
                 // can raise, print the minimal amount
-                Console.WriteLine("2. Raise {0}$", action.RaiseAmount);
+                Console.WriteLine("2. Raise {0}BTC", action.RaiseAmount);
             }
             // can always fold:
             Console.WriteLine("{0}. Fold", foldIndex);
             if (!action.IsAllInMode && action.CanRaise)
             {
                 // when the player isn't forced to go "all in", it is the last option.
-                Console.WriteLine("4. All In {0}$", player.Money);
+                Console.WriteLine("4. All In {0}BTC", player.Money);
             }
             Console.WriteLine("Enter a choice number or another amount to RAISE");
 
@@ -359,7 +359,7 @@ namespace PokerConsole.Engine
             int totalAmount = callAmount + raiseAmount;
             if (betAction == BetAction.Raise && 0 == player.Money)
             {
-                Console.WriteLine("is All In {0}$", totalAmount);
+                Console.WriteLine("is All In {0}BTC", totalAmount);
             }
             else
             {
@@ -370,13 +370,13 @@ namespace PokerConsole.Engine
                         if (callAmount == 0)
                             Console.WriteLine("Checked");
                         else
-                            Console.WriteLine("Called {0}$", callAmount);
+                            Console.WriteLine("Called {0}BTC", callAmount);
                         break;
                     case BetAction.Raise:
                         if (callAmount == 0)
-                            Console.WriteLine("Raised {0}$", raiseAmount);
+                            Console.WriteLine("Raised {0}BTC", raiseAmount);
                         else
-                            Console.WriteLine("Called {0}$ & Raised {1}$", callAmount, raiseAmount);
+                            Console.WriteLine("Called {0}BTC & Raised {1}BTC", callAmount, raiseAmount);
                         break;
                     case BetAction.Fold: Console.WriteLine("Folds"); break;
                 }

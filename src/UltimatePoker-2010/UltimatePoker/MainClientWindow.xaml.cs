@@ -34,6 +34,7 @@ namespace UltimatePoker
             designedHeight = Height;
             designedWidth = Width;
         }
+
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
@@ -47,7 +48,6 @@ namespace UltimatePoker
             base.OnClosed(e);
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged -= new EventHandler(SystemEvents_DisplaySettingsChanged);
         }
-
 
         void MainClientWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -119,7 +119,10 @@ namespace UltimatePoker
         }
 
 
-        public PokerGameBoard GameBoard { get { return gameBoard; } }
+        public PokerGameBoard GameBoard
+        {
+            get { return gameBoard; }
+        }
 
 
         private void SelectHand(object sender, RoutedEventArgs e)

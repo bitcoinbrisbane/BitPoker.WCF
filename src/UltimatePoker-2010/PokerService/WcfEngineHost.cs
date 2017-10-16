@@ -24,6 +24,7 @@ namespace PokerService
         private const int POKER_BROADCAST = 1;
         private const int POKER_SERVICE = 0;
         private const int POKER_CHAT = 3;
+
         // an array of service hosts which this helper opens
         private ServiceHost[] hosts = new ServiceHost[4];
         // the concrete helper

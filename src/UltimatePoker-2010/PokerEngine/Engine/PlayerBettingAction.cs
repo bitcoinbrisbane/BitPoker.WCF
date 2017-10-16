@@ -32,7 +32,6 @@ namespace PokerEngine.Engine
     [Serializable]
     public class PlayerBettingAction
     {
-        
         /// <summary>
         /// Creates a new instance of the PlayerBettingAction class
         /// </summary>
@@ -134,6 +133,5 @@ namespace PokerEngine.Engine
         {
             action = BetAction.Fold;
         }
-
     }
 }

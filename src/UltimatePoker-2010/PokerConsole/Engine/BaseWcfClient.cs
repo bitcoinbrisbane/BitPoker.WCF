@@ -49,6 +49,7 @@ namespace PokerConsole.Engine
         private bool betRoundStarting = true;
         // a flag which indicates if needs to call ClientHelper.DrawingRoundStarted
         private bool drawingRoundStarted = true;
+
         /// <summary>
         /// 	<para>Initializes an instance of the <see cref="BaseWcfClient"/> class.</para>
         /// </summary>
@@ -173,6 +174,7 @@ namespace PokerConsole.Engine
             {
                 // get the user name
                 string userName = concreteClient.GetName();
+
                 // try to login (the server might call NotifyNameExists or NotifyGameInProgress)
                 Player loggedIn = proxyService.Login(userName);
                 // when the server replies with a null result, try a new login name...
@@ -697,8 +699,6 @@ namespace PokerConsole.Engine
             }
 
             #endregion
-
-
         }
 
         /// <summary>
@@ -805,11 +805,5 @@ namespace PokerConsole.Engine
         {
             Dispose(false);
         }
-
-
-
-
-
-
     }
 }

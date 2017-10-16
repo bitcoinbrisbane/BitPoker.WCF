@@ -27,7 +27,10 @@ namespace PokerRules.Games
         /// <summary>
         /// Gets the dealt community cards.
         /// </summary>
-        public ReadOnlyCollection<Card> CommunityCards { get { return communityCards.AsReadOnly(); } }
+        public ReadOnlyCollection<Card> CommunityCards
+        {
+            get { return communityCards.AsReadOnly(); }
+        }
 
         /// <summary>
         /// Gets the maximal player count

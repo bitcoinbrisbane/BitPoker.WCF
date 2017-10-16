@@ -67,12 +67,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bitcoin.cs" />
-    <Compile Include="IRandom.cs" />
+    <Compile Include="IChannel.cs" />
     <Compile Include="IWallet.cs" />
+    <Compile Include="Lightning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Providers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

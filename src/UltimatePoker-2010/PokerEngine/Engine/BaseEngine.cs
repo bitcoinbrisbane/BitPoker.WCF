@@ -53,8 +53,10 @@ namespace PokerEngine.Engine
 
         // The current roudn playing players. It contains the players which didn't fold
         private List<Player> playingPlayers = new List<Player>();
+
         // The current dealer
         private int dealer = 0;
+
         // The player which starts after the blinds
         private int startingPlayer;
 
@@ -70,6 +72,7 @@ namespace PokerEngine.Engine
             StartingMoney = SmallRaise * 20;
             AutoIncreaseOnHandDivider = 7;
         }
+
         /// <summary>
         /// Gets or sets the Raise Limit. Default is 3.
         /// </summary>
@@ -193,6 +196,7 @@ namespace PokerEngine.Engine
         {
             get { return pot.GetPlayersBettingData(roundOrder); }
         }
+
         /// <summary>
         /// This event is fired when the game run starts, the delegate passes the signed in players.
         /// </summary>
@@ -232,10 +236,12 @@ namespace PokerEngine.Engine
                 // set the players money and calculate the total amount of money
                 players.ForEach((Player cur) => cur.Money = StartingMoney);
                 TotalMoney = players.Count * StartingMoney;
+
                 if (players.Count > 1)
                 {
                     // notify game start
                     OnGameStarted(players);
+
                     // play until a winner exists
                     while (PlayNextRound())
                     {
@@ -328,12 +334,12 @@ namespace PokerEngine.Engine
             // move the dealer chip one place
             ++dealer;
             dealer = dealer % players.Count;
+
             // Check if there are more players
             if (players.Count > 1)
             {
                 // Use derive class to determine if another round should be played
                 return WaitForAnotherRound();
-
             }
             else // there are no more players.
             {
