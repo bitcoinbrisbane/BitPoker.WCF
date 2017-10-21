@@ -10,7 +10,7 @@ namespace PokerEngine.Engine
     public enum BetAction
     {
         /// <summary>
-        /// The player checks or calsl
+        /// The player checks or calls
         /// </summary>
         CheckOrCall,
         /// <summary>
@@ -48,6 +48,7 @@ namespace PokerEngine.Engine
         }
 
         private BetAction action = BetAction.Fold;
+
         /// <summary>
         /// Gets a value indicating if the player can raise. 
         /// </summary>
@@ -132,6 +133,25 @@ namespace PokerEngine.Engine
         public void Fold()
         {
             action = BetAction.Fold;
+        }
+
+        /// <summary>
+        /// Sign the tx
+        /// </summary>
+        /// <param name="privateKey"></param>
+        public void Sign(String privateKey)
+        {
+            String message = this.ToString();
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }

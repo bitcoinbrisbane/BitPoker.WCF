@@ -107,7 +107,7 @@ namespace PokerConsole
 
                     RulesInterpreterBridge rulesBridge = new RulesInterpreterBridge();
                     BaseWcfClient client = new BaseWcfClient(clientBridge);
-                    clientBridge.ClientHelper = new ConsoleClientHelper(rulesBridge);
+                    clientBridge.ClientHelper = new ConsoleClientHelper(rulesBridge, wallet);
                     ServerDetails result = client.Initialize(serverIp, port);
 
                     // check the result of the connection
@@ -137,7 +137,7 @@ namespace PokerConsole
 
                         IRulesInterpreter interpreter = (IRulesInterpreter)outerClient;
                         rulesBridge.Interpreter = interpreter;
-                            
+
                         if (result.Game == ServerGame.FiveCardDraw)
                             clientBridge.FiveCardHelper = (IFiveCardClientHelper)outerClient;
                         else
@@ -149,7 +149,9 @@ namespace PokerConsole
                         client.Disconnect();
                     }
                     else
+                    {
                         Console.WriteLine("Game is in progress. Server refused connection");
+                    }
                 }
 
             }

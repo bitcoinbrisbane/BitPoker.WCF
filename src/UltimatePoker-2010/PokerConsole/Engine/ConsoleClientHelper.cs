@@ -21,8 +21,14 @@ namespace PokerConsole.Engine
     {
         // a flag which indicates the player is sitting out
         private bool sittingOut = false;
+
         // the concrete client which this client helps. It is used to determine the player hands
         private IRulesInterpreter client;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public BitPoker.Crypto.IWallet Wallet { get; set; }
 
         /// <summary>
         /// Creates a new instance of the ConsoleClientHelper
@@ -34,6 +40,17 @@ namespace PokerConsole.Engine
         }
 
         /// <summary>
+        /// Creates a new instance of the ConsoleClientHelper
+        /// </summary>
+        /// <param name="client"></param>
+        /// <param name="wallet"></param>
+        public ConsoleClientHelper(IRulesInterpreter client, BitPoker.Crypto.IWallet wallet)
+        {
+            this.client = client;
+            this.Wallet = wallet;
+        }
+
+        /// <summary>
         /// Called by the client when a connection is made successfuly to the server
         /// </summary>
         /// <param name="endPoint">
@@ -41,7 +58,7 @@ namespace PokerConsole.Engine
         /// </param>
         public void NotifyConnectedToServer(EndPoint endPoint)
         {
-            Console.WriteLine("Connected to " + endPoint);
+            Console.WriteLine("Connected to {0}", endPoint);
         }
 
         /// <summary>
@@ -133,7 +150,7 @@ namespace PokerConsole.Engine
         public void NotifyDealerAndPotAmount(Player dealer, int potAmount)
         {
             Console.WriteLine("Dealer is {0}", dealer.Name);
-            Console.WriteLine("Pot amount is: {0}$", potAmount);
+            Console.WriteLine("Pot amount is: {0}BTC", potAmount);
         }
 
 
@@ -144,7 +161,7 @@ namespace PokerConsole.Engine
         /// <param name="openAmount">The player open amount, may be 0</param>
         public void NotifyBlindOpen(Player opened, int openAmount)
         {
-            Console.WriteLine("{0} blind opens with {1}$", opened.Name, openAmount);
+            Console.WriteLine("{0} blind opens with {1}BTC", opened.Name, openAmount);
         }
 
         /// <summary>
@@ -155,7 +172,9 @@ namespace PokerConsole.Engine
         public void NotifyBlindRaise(Player raiser, int raiseAmount)
         {
             if (raiseAmount > 0)
-                Console.WriteLine("{0} blind raises with {1}$", raiser.Name, raiseAmount);
+            {
+                Console.WriteLine("{0} blind raises with {1}BTC", raiser.Name, raiseAmount);
+            }
         }
 
         /// <summary>
@@ -166,7 +185,7 @@ namespace PokerConsole.Engine
         /// <param name="communityCards">The community cards in the game (if any) may be null or in 0 length</param>
         public virtual void WaitSynchronization(IEnumerable<Player> player, PotInformation potInformation, Card[] communityCards)
         {
-            Console.WriteLine("Pot amount is: {0}$", potInformation.PotAmount);
+            Console.WriteLine("Pot amount is: {0}BTC", potInformation.PotAmount);
 
             foreach (Player curPlayer in player)
             {
@@ -309,7 +328,8 @@ namespace PokerConsole.Engine
             // handle the user result:
             switch (option)
             {
-                case 1: action.Call(); break;
+                case 1: action.Call();
+                    break;
                 case 2: // fold or raise:
                     if (foldIndex == 2)
                         action.Fold();

@@ -35,6 +35,7 @@ namespace BitPoker.Crypto
             BitcoinSecret secret = privateKey.GetBitcoinSecret(_network);
 
             _address = privateKey.PubKey.GetAddress(_network);
+            this.PublicKey = privateKey.PubKey.ToHex();
         }
 
         public Bitcoin(String wifKey, Boolean testnet = true)
