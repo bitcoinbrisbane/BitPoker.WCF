@@ -193,7 +193,6 @@ namespace PokerConsole.Engine
             }
         }
 
-
         /// <summary>
         /// The default implementation of the print player method.
         /// </summary>
@@ -222,6 +221,7 @@ namespace PokerConsole.Engine
             }
             Console.WriteLine();
         }
+
         /// <summary>
         /// Prints the given hand to the console.
         /// </summary>
@@ -281,6 +281,7 @@ namespace PokerConsole.Engine
         {
             Console.WriteLine("====================");
             Console.WriteLine("{0}, would you like to:", player.Name);
+
             // the index which will be the fold action:
             int foldIndex = 3;
 
